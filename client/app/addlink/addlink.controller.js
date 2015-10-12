@@ -5,7 +5,15 @@ angular.module('pinApp')
     $scope.errorMessage = '';
     $scope.message = '';
 
-    var getMyLinks = function() {
+    $scope.links = [];
 
+    var getMyLinks = function() {
+        $http.get('/api/links/' + Auth.getCurrentUser().name)
+          .success(function(data){
+            $scope.links = data;
+          })
+          .error(function(err){
+            $scope.errorMessage = 'Error while retrieving your data. Sorry... :-(';
+          });
     }
   });

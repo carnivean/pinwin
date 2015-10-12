@@ -12,12 +12,21 @@ exports.index = function(req, res) {
 };
 
 // Get a single link
+/*
 exports.show = function(req, res) {
   Link.findById(req.params.id, function (err, link) {
     if(err) { return handleError(res, err); }
     if(!link) { return res.status(404).send('Not Found'); }
     return res.json(link);
   });
+}; */
+
+exports.showByUsername = function(req, res) {
+  Link.find({username: req.params.username}, function(err, links) {
+    if(err) { return handleError(res, err); }
+    if(!links) { return res.status(404).send('Not Found'); }
+    return res.status(200).json(links);
+  })
 };
 
 // Creates a new link in the DB.
