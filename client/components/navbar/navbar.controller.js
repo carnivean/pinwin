@@ -4,7 +4,10 @@ angular.module('pinApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/'
+      'link': '/',
+    }, {
+      'title': 'Add Link',
+      'link': '/addlink',
     }];
 
     $scope.isCollapsed = true;
