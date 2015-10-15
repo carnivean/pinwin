@@ -6,7 +6,9 @@ angular.module('pinApp', [
   'ngSanitize',
   'ngRoute',
   'btford.socket-io',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'wu.masonry',
+  'angularModalService'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -43,7 +45,21 @@ angular.module('pinApp', [
       }
     };
   })
-
+  .directive('errSrc', function() {
+    return {
+      link: function(scope, element, attrs) {
+        var defaultSrc = attrs.src;
+        element.bind('error', function() {
+          if(attrs.errSrc) {
+            element.attr('src', attrs.errSrc);
+          }
+          else if(attrs.src) {
+            element.attr('src', defaultSrc);
+          }
+        });
+      }
+    }
+  })
   .run(function ($rootScope, $location, Auth) {
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$routeChangeStart', function (event, next) {

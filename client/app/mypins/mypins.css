@@ -1,0 +1,15 @@
+.img-block {
+  width: 200px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+  box-shadow: 2px 2px;
+  margin: 5px 5px 5px 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.new-link {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 4em;
+}

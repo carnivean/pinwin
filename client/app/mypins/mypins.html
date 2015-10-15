@@ -1,0 +1,31 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Your pins</h1>
+      <h3>{{errorMessage}}</h3>
+      <h3>{{links}}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div masonry>
+        <div class="new-link text-center img-block masonry-brick">
+          <a href=""><i class="cent fa fa-plus-circle"></i></a>
+        </div>
+        <div class="img-block masonry-brick">
+          Test #2
+        </div>
+        <div class="img-block masonry-brick">
+          Test #3
+        </div>
+        <div class="img-block masonry-brick">
+          Test #4
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include="'components/footer/footer.html'"></div>

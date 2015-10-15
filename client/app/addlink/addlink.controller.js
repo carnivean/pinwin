@@ -1,19 +1,18 @@
 'use strict';
 
 angular.module('pinApp')
-  .controller('AddlinkCtrl', function ($scope, $http, Auth, $location) {
+  .controller('AddlinkCtrl', function ($scope, $http, Auth) {
     $scope.errorMessage = '';
     $scope.message = '';
 
-    $scope.links = [];
+    $scope.url = '';
 
-    var getMyLinks = function() {
-        $http.get('/api/links/' + Auth.getCurrentUser().name)
-          .success(function(data){
-            $scope.links = data;
-          })
-          .error(function(err){
-            $scope.errorMessage = 'Error while retrieving your data. Sorry... :-(';
-          });
-    }
+    // checks for a valid extension
+    var checkURL = function(url) {
+      return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+    };
+
+    $scope.inputChanged = function() {
+
+    };
   });

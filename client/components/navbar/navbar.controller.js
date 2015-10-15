@@ -6,8 +6,8 @@ angular.module('pinApp')
       'title': 'Home',
       'link': '/',
     }, {
-      'title': 'Add Link',
-      'link': '/addlink',
+      'title': 'Your Pins',
+      'link': '/mypins',
     }];
 
     $scope.isCollapsed = true;
