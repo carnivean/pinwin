@@ -10,13 +10,15 @@
   <div class="row">
     <div class="col-lg-12">
       <div masonry>
-        <div class="new-link text-center img-block masonry-brick">
-          <a href=""><i class="cent fa fa-plus-circle"></i></a>
-        </div>
         <div class="text-center img-block masonry-brick" ng-repeat="link in links">
           <img ng-src="{{link.url}}" class="img-pins"><br>
-          <p class="p-repeated text-left p-inline"><i class="text-red fa fa-repeat"></i>{{link.username.length}}</p>
+          <p class="p-repeated text-left p-inline">
+            <i class="text-red fa fa-repeat"></i>{{link.username.length}}
+          </p>
           <p class="p-hearts text-right p-inline"><i class="text-red fa fa-heart"></i>{{link.likes.length}}</p>
+        </div>
+        <div ng-show="loaded" class="new-link text-center img-block masonry-brick">
+          <a ng-click="showModal()"><i class="cent fa fa-plus-circle"></i></a>
         </div>
       </div>
     </div>

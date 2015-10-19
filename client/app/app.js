@@ -8,7 +8,7 @@ angular.module('pinApp', [
   'btford.socket-io',
   'ui.bootstrap',
   'wu.masonry',
-  'angularModalService'
+  'btford.modal'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
@@ -44,6 +44,15 @@ angular.module('pinApp', [
         }
       }
     };
+  })
+  .factory('myModal', function (btfModal) {
+    return btfModal({
+      controller: 'AddlinkCtrl',
+      templateUrl: 'app/addlink/addlink.html'
+    });
+  })
+  .controller('MyModalCtrl', function (myModal) {
+    this.closeMe = myModal.deactivate;
   })
   .directive('errSrc', function() {
     return {

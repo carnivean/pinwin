@@ -2,7 +2,7 @@
   width: 200px;
   border: 1px solid;
   border-radius: 10px;
-  padding: 5px 5px 5px 5px;
+  padding: 10px 5px 5px 5px;
   box-shadow: 2px 2px;
   margin: 5px 5px 5px 5px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -24,6 +24,8 @@
 
 .p-inline {
   display: inline;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 .p-repeated {

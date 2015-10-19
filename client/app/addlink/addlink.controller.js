@@ -1,11 +1,13 @@
 'use strict';
 
 angular.module('pinApp')
-  .controller('AddlinkCtrl', function ($scope, $http, Auth) {
+  .controller('AddlinkCtrl', function ($scope, $http, Auth, myModal) {
     $scope.errorMessage = '';
     $scope.message = '';
 
     $scope.url = '';
+
+    $scope.closeMe = myModal.deactivate;
 
     // checks for a valid extension
     var checkURL = function(url) {
@@ -37,6 +39,5 @@ angular.module('pinApp')
         } else {
           $scope.errorMessage = ' Please enter a link before submitting. Thanks!';
         }
-
     };
   });

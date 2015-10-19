@@ -13,7 +13,10 @@ exports.register = function(socket) {
   Link.schema.post('remove', function (doc) {
     onRemove(socket, doc);
   });
-}
+  Link.schema.post('findOneAndUpdate', function (doc) {
+    onSave(socket, doc);
+  });
+};
 
 function onSave(socket, doc, cb) {
   socket.emit('link:save', doc);

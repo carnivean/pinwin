@@ -6,7 +6,8 @@ var controller = require('./link.controller');
 var router = express.Router();
 
 router.get('/', controller.index);
-router.get('/:username', controller.showByUsername);
+router.get('/:id', controller.show);
+router.get('/user/:username', controller.showByUsername);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
