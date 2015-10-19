@@ -23,3 +23,11 @@
   bottom: 0;
   width: 100%;
 }
+
+.submit-btn {
+  margin-top: 20px;
+}
+
+.errorMessage {
+  color: orangered;
+}

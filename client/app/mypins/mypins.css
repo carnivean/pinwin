@@ -13,3 +13,25 @@
   padding-bottom: 50px;
   font-size: 4em;
 }
+
+.img-pins {
+  width: 150px
+}
+
+.text-red {
+  color: orangered;
+}
+
+.p-inline {
+  display: inline;
+}
+
+.p-repeated {
+  float: left;
+  margin-left: 20px;
+}
+
+.p-hearts {
+  float: right;
+  margin-right: 20px;
+}

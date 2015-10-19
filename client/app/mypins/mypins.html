@@ -5,7 +5,6 @@
     <div class="col-md-12">
       <h1>Your pins</h1>
       <h3>{{errorMessage}}</h3>
-      <h3>{{links}}</h3>
     </div>
   </div>
   <div class="row">
@@ -14,14 +13,10 @@
         <div class="new-link text-center img-block masonry-brick">
           <a href=""><i class="cent fa fa-plus-circle"></i></a>
         </div>
-        <div class="img-block masonry-brick">
-          Test #2
-        </div>
-        <div class="img-block masonry-brick">
-          Test #3
-        </div>
-        <div class="img-block masonry-brick">
-          Test #4
+        <div class="text-center img-block masonry-brick" ng-repeat="link in links">
+          <img ng-src="{{link.url}}" class="img-pins"><br>
+          <p class="p-repeated text-left p-inline"><i class="text-red fa fa-repeat"></i>{{link.username.length}}</p>
+          <p class="p-hearts text-right p-inline"><i class="text-red fa fa-heart"></i>{{link.likes.length}}</p>
         </div>
       </div>
     </div>

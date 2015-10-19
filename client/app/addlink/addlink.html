@@ -10,6 +10,9 @@
     <div class="col-sm-12">
       <div class="box">
           <input type="tel" class="input-sm form-control" placeholder="A new url" ng-model="input" ng-change="inputChanged()">
+          <button ng-click="submitLink()" class="submit-btn form-group ntn-primary btn" type="submit">Submit</button>
+          <p>{{message}}</p>
+          <p class="errorMessage">{{errorMessage}}</p>
       </div>
     </div>
   </div>
